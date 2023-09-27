@@ -215,7 +215,7 @@ div.post-page a {
   text-decoration: underline;
 }
 
-div.post-page h1 {
+div.post-page .Heading1 {
   text-align: center;
   margin: 10px 0 5px;
 }

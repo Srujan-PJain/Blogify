@@ -1,10 +1,12 @@
 import { useState } from "react";
 import { toast } from "react-toastify";
+import { useNavigate } from "react-router-dom";
 
 export default function RegisterPage() {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
   const [message, setMessage] = useState("");
+  const navigate = useNavigate();
   const register = async (e) => {
     e.preventDefault();
     const pattern =
@@ -30,7 +32,8 @@ export default function RegisterPage() {
       headers: { "Content-Type": "application/json" },
     });
     if (response.status === 200) {
-      setMessage("Registration Successful, Continue login");
+      // setMessage("Registration Successful, Continue login");
+      navigate("/login");
     } else {
       setMessage("Registration Failed, try again with different username");
     }

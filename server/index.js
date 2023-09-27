@@ -11,6 +11,7 @@ const secret = "ffsf2rww32r32r";
 const salt = bcrypt.genSaltSync(10);
 const multer = require("multer");
 const uploadMiddleware = multer({ dest: "uploads/" });
+
 const fs = require("fs");
 
 app.use(cors({ credentials: true, origin: "http://localhost:3000" }));

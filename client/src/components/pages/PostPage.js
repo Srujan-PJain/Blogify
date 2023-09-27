@@ -40,7 +40,7 @@ export default function PostPage() {
       <Helmet>
         <script src="https://kit.fontawesome.com/64d58efce2.js" />
       </Helmet>
-      <h1>{postInfo.title}</h1>
+      <h1 className="Heading1">{postInfo.title}</h1>
       <time>{format(new Date(postInfo.createdAt), "d MMM, yyyy HH:mm")}</time>
       <div className="author">by {postInfo.author.username}</div>
       {userInfo.id === postInfo.author._id && (
